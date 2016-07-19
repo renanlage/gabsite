@@ -1869,138 +1869,6 @@ header .logo span {
 }
 
 /**
- * Popup Modal - (_layout.scss)
- * ------------------------------------------------------------------
- */
-.popup-modal {
-	max-width: 550px;
-	background: #FFFFFF;
-	position: relative;
-	margin: 0 auto;
-}
-.popup-modal .media {
-	position: relative;
-}
-.popup-modal img {
-	vertical-align: bottom;
-}
-.popup-modal .description-box {
-	padding: 1.8rem 3.6rem 3rem;
-}
-.popup-modal .description-box h4 {
-	font-family: "poppins-bold", sans-serif;
-	font-size: 1.5rem;
-	line-height: 2.4rem;
-	margin-bottom: .6rem;
-}
-.popup-modal .description-box p {
-	font-family: "poppins-regular", sans-serif;
-	font-size: 1.4rem;
-	line-height: 2.4rem;
-	margin-bottom: 12px;
-}
-.popup-modal .categories {
-	font-family: "poppins-bold", sans-serif;
-	font-size: 1.1rem;
-	line-height: 1.8rem;
-	text-transform: uppercase;
-	letter-spacing: .1rem;
-	display: block;
-	text-align: left;
-	color: rgba(0, 0, 0, 0.5);
-}
-.popup-modal .link-box {
-	width: 100%;
-	overflow: hidden;
-	background: #000000;
-}
-.popup-modal .link-box a {
-	font-family: "poppins-bold", sans-serif;
-	font-size: 1.2rem;
-	line-height: 6rem;
-	color: #FFFFFF;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	cursor: pointer;
-	display: block;
-	text-align: center;
-	float: left;
-	width: 50%;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-webkit-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
-.popup-modal .link-box a:first-child {
-	border-right: 1px solid rgba(200, 200, 200, 0.1);
-}
-.popup-modal .link-box a:hover {
-	background: #cc005f;
-	border: none;
-}
-@media only screen and (max-width:600px) {
-	.popup-modal {
-		width: auto;
-		margin: 0 20px;
-	}
-}
-
-/**
- * transition effect for modal popup - (_layout.scss)
- * ------------------------------------------------------------------
- */
-
-/* overlay at start */
-.mfp-fade.mfp-bg {
-	opacity: 0;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-webkit-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
-
-/* overlay animate in */
-.mfp-fade.mfp-bg.mfp-ready {
-	opacity: .9;
-}
-
-/* overlay animate out */
-.mfp-fade.mfp-bg.mfp-removing {
-	opacity: 0;
-}
-
-/* content at start */
-.mfp-fade.mfp-wrap .mfp-content {
-	opacity: 0;
-	-webkit-transform: translateY(-100%);
-	-ms-transform: translateY(-100%);
-	transform: translateY(-100%);
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-webkit-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
-
-/* content animate in */
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-	opacity: 1;
-	-webkit-transform: translateY(0);
-	-ms-transform: translateY(0);
-	transform: translateY(0);
-}
-
-/* content animate out */
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-	opacity: 0;
-	-webkit-transform: translateY(-100%);
-	-ms-transform: translateY(-100%);
-	transform: translateY(-100%);
-}
-
-/**
  * ===================================================================
  * 14. call-to-action section - (_layout.scss)
  *
@@ -2097,6 +1965,8 @@ header .logo span {
 }
 
 #services .section-intro {
+	padding-left: auto;
+	text-align: center;
 	margin-bottom: 1.8rem;
 }
 
@@ -2111,7 +1981,7 @@ header .logo span {
 }
 .services-content {
 	max-width: 100%;
-	display: inline-block;
+	display: block;
 }
 .services-list {
 	margin-top: 1.2rem;
@@ -2120,8 +1990,17 @@ header .logo span {
 	margin: .6rem 0 0;
 }
 .services-list .service {
+	margin-top: 3.5rem;
 	margin-bottom: 1.2rem;
 	padding: 0 30px;
+}
+.services-list h5 {
+  font-size: 1.5rem;
+  line-height: 1.875;
+  margin-bottom: 0.3rem;
+  letter-spacing: .2rem;
+  color: #8e948b;
+  text-transform: uppercase;
 }
 .services-list .icon {
 	display: inline-block;
@@ -2134,99 +2013,16 @@ header .logo span {
 .services-list h3 {
 	color: #FFFFFF;
 }
-
-.services-list span {
-	display: block;
-	width: 1.2rem;
-	height: 1.2rem;
-	margin: 1.2rem .8rem 0 .8rem;
-	border-radius: 50%;
-	display: inline-block;
-	background: #FFFFFF;
-	z-index: 1;
-}
 .services-list .desc {
 	color: rgba(255, 255, 255, 0.6);
 }
 
-/* pagination */
-.owl-pagination {
 
-}
-.owl-theme .owl-controls .owl-page {
-}
-.owl-theme .owl-controls .owl-page span {
-}
-.owl-theme .owl-controls .owl-page.active span {
-	background: #FF0077;
-}
-
-
-/**
- * ===================================================================
- * 16. stats - (_layout.scss)
- *
- * -------------------------------------------------------------------
- */
-#stats {
+.pink-line {
+	width: 100%;
 	background: #990047;
 	padding-bottom: 0.5rem;
-	text-align: center;
 }
-#stats .row {
-	max-width: 1440px;
-}
-#stats .stat {
-	border-left: 1px solid rgba(255, 255, 255, 0.12);
-	min-height: 17.4rem;
-}
-#stats .stat:first-child {
-	border: none;
-}
-#stats .icon-part i {
-	font-size: 4.8rem;
-	color: #000000;
-}
-#stats .stat-count {
-	color: #FFFFFF;
-	font-size: 3.6rem;
-	margin-top: 1.2rem;
-	margin-bottom: 0;
-	font-family: "poppins-medium", sans-serif;
-	color: white;
-}
-#stats .stat-title {
-	color: rgba(255, 255, 255, 0.5);
-}
-
-/**
- * responsive:
- * stats
- * -------------------------------------------------------------------
- */
-@media only screen and (max-width:1024px) {
-	#stats .stat:nth-child(n) {
-		border-left: 1px solid rgba(255, 255, 255, 0.12);
-		padding-bottom: 1.5rem;
-	}
-	#stats .stat:nth-child(3n+1) {
-		border: none;
-	}
-}
-@media only screen and (max-width:768px) {
-	#stats .stat:nth-child(n) {
-		border-left: 1px solid rgba(255, 255, 255, 0.12);
-	}
-	#stats .stat:nth-child(2n+1) {
-		border: none;
-	}
-}
-@media only screen and (max-width:600px) {
-	#stats .stat:nth-child(n) {
-		border: none;
-	}
-}
-
 
 /**
  * ===================================================================
@@ -2352,46 +2148,6 @@ header .logo span {
 }
 #contact button.submitform:hover, #contact button.submitform:focus {
 	background: #cc005f;
-}
-#message-warning, #message-success {
-	display: none;
-	background: #0d0d0d;
-	border-radius: 3px;
-	padding: 3rem;
-	margin-bottom: 3.6rem;
-	width: 100%;
-}
-#message-warning {
-	color: #fa0003;
-}
-#message-success {
-	color: #FF0077;
-}
-#message-warning i, #message-success i {
-	margin-right: 10px;
-}
-
-/* form loader */
-#submit-loader {
-	display: none;
-	position: relative;
-	left: 0;
-	top: 1.8rem;
-	width: 100%;
-	text-align: center;
-}
-#submit-loader .text-loader {
-	display: none;
-	font-family: "poppins-bold", sans-serif;
-	color: #FFFFFF;
-	letter-spacing: .3rem;
-	text-transform: uppercase;
-}
-.oldie #submit-loader .s-loader {
-	display: none;
-}
-.oldie #submit-loader .text-loader {
-	display: block;
 }
 .contact-info {
 	margin: 4.8rem auto 0;
